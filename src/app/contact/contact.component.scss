@@ -1,0 +1,88 @@
+
+
+.contact-us {
+
+    .contact-form {
+        p{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+
+        form{
+
+            .form-group{
+                margin-bottom: 25px;
+
+                .form-control {
+                    background: #f8f8f8;
+                    border: none;
+                }
+
+                div {
+                    position: absolute;
+
+                    span {
+                        display: inline-block;
+                        font-size: 14px;
+                        text-indent: 5px;
+                        color: red;
+                    }
+                }
+
+                input.ng-invalid.ng-touched{
+                    border:1px solid red;
+                }
+
+                input:focus::placeholder, textarea:focus::placeholder{
+                    color: transparent !important;
+                }
+            }
+
+            
+        }        
+    }
+
+    img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 50px auto;
+
+    mat-icon {
+        color: #ffc107;
+        text-shadow: 1px 0px 0px black, 0px 1px 0px black, -1px 0px 0px black, 0px -1px 0px black;
+    }
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: center;
+
+    a{
+        color: #000;
+        font-size: 2rem;
+        display: inline-block;
+        margin: auto 25px;
+
+        &:hover {
+            color:  #ffc107;
+            text-shadow: 0px 0px 5px #ddd;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .contact-form {
+        margin: 10px auto;
+    }
+}

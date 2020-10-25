@@ -1,0 +1,72 @@
+<section>
+    <div class="container">
+        <div class="my-5">
+            <h3 class="section-header">CONTACT US.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio illum dolores tenetur rem iusto quis sapiente?</p>
+            <p> officiis natus maiores, omnis voluptatum qui ab, quasi a laborum</p>
+        </div>    
+        <div class="contact-us">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <p>Send Us Message.</p>
+                        <form #contactForm = "ngForm" (submit)="onFormSubmit(contactForm)">
+                            <div class="form-group">
+                                <input type="text" name="uName" #uName="ngModel" ngModel id="" class="form-control" placeholder="Name" required>
+                                <div *ngIf="uName.errors && uName.touched">
+                                    <span *ngIf= "uName.errors.required">Please enter your name.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" #email="ngModel" ngModel  class="form-control" placeholder="Email" required>
+                                <div *ngIf="email.errors && email.touched">
+                                    <span *ngIf="email.errors.required">Please enter your mail id.</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea type="email" name="message" #message="ngModel" ngModel class="form-control" placeholder="Message" rows="10" required></textarea>
+                                <div *ngIf="message.errors && message.touched">
+                                    <span *ngIf="message.errors.required">Please write your message.</span>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <input type="submit" class="btn btn-warning" value="Send Message" [disabled]="!contactForm.valid">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-6 overflow-hidden">
+                    <img src="https://image.freepik.com/free-photo/toned-image-modern-office-buildings-central-hong-kong_1112-1227.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-details">
+            <div>
+                <mat-icon aria-hidden="false" aria-label="Example home icon">apartment</mat-icon>
+                <p>157 A SKPM, <br> AP IND</p>
+            </div>
+            <div>
+                <mat-icon>local_phone</mat-icon>
+                <p>+0-123-123-456 <br>+0-123-123-457</p>
+            </div>
+            <div>
+                <mat-icon aria-hidden="false" aria-label="Example home icon">email</mat-icon>
+                <p>hrk@hrkmail.com</p>
+            </div>
+        </div>
+        <div class="social-media">
+            <div>
+                <a href="">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

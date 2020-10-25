@@ -1,0 +1,23 @@
+.navbar-collapse {
+    flex-grow:0 !important;
+}
+
+// .nav-item.active {
+//     background: transparent !important;
+    
+//     .nav-link {
+//         color: rgba(0,0,0,.5) !important;
+//     }
+// }
+
+.nav-link {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
+
+.activate {
+    background: #ffc107;
+    color:rgb(255, 255, 255) !important;
+    border-radius: 5px;    
+}
